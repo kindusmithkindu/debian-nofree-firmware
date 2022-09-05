@@ -92,7 +92,7 @@
 
 ```
   #!/bin/bash
-  axel -n10 https://kernel.source.codeaurora.cn/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/linux-firmware-main.tar.gz && \
+  axel -n10 https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/ && \
   tar -zxvf /home/yourname/firmware/linux-firmware-main.tar.gz -C /lib && \
   rm -rf /lib/firmware.old && mv /lib/firmware /lib/firmware.old && mv /lib/linux-firmware-main /lib/firmware && \
   cp /home/yourname/firmware/regulatory/* /lib/firmware && \
