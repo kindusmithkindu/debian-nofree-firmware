@@ -34,7 +34,7 @@ Unofficial solution for debian nofree firmware
    sudo update-initramfs -u -k all
 ```
    
-   or, a fresh install
+7. or, a fresh install:
 
 ```
    sudo update-initramfs -d -k all && sudo update-initramfs -c -k all
