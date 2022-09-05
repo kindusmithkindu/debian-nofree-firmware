@@ -43,7 +43,7 @@
   ath10k_pci 0000:07:00.0: firmware: failed to load ath10k/pre-cal-pci-0000:07:00.0.bin
   ath10k_pci 0000:07:00.0: firmware: failed to load ath10k/cal-pci-0000:07:00.0.bin
 ```
-9. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a “firmware.timer” to updated from time to time, based on this service,Please replace yourname in the script with your personal user name
+9. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a time of “firmware.timer” for update from time to time， based on this service,Please replace yourname in the script with your personal user name
 
 ```
   firmware.service:
