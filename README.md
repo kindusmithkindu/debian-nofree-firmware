@@ -12,6 +12,7 @@ https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/comm
 sudo tar -zxvf linux-firmware-main.tar.gz
 
 3. Move the old firmware package to the firmware.old directory
+
 sudo mv /lib/firmware /lib/firmware.old
 
 4. Move the downloaded new firmware package to /lib
@@ -23,8 +24,11 @@ sudo mv ~/linux-firmware-main /lib/firmware
 sudo cp ~/regulatory* /lib/firmware/
 
 6. Update initramfs
+
 sudo update-initramfs -u -k all
+
 or, a fresh install
+
 sudo update-initramfs -d -k all && sudo update-initramfs -c -k all
 
 7. At this point, you have basically solved most of the firmware problems, but there are still two small datum test packages that cannot be installed. Of course, these are optional dependencies and you can completely ignore them. Use the command of “sudo dmesg|grep fail” , you should see two error messages, please ignore them:
