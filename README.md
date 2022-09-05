@@ -46,30 +46,27 @@ Unofficial solution for debian nofree firmware
 ```
 8. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a “firmware.timer” based on this service
 
+```
   firmware.service:
+  [Unit]
+  Description="Use firmware script to install the Linux firmware"
 
+  [Service]
+  WorkingDirectory=/home/yourname/firmware
+  ExecStart=/bin/sh -c '/home/yourname/firmware/firmware'
 ```
-[Unit]
-Description="Use firmware script to install the Linux firmware"
-
-[Service]
-WorkingDirectory=/home/yourname/firmware
-ExecStart=/bin/sh -c '/home/yourname/firmware/firmware'
 ```
-
   firmware.timer:
+  [Unit]
+  Description="Linux firmware install"
 
-```
-[Unit]
-Description="Linux firmware install"
+  [Timer]
+  OnCalendar=weekly
+  AccuracySec=12h
+  Persistent=true
 
-[Timer]
-OnCalendar=weekly
-AccuracySec=12h
-Persistent=true
-
-[Install]
-WantedBy=timers.target
+  [Install]
+  WantedBy=timers.target
 ```
 
 9. Please replace yourname in the text with your personal user name, and create a new firemware directory and firmware script, and grant executable permissions
