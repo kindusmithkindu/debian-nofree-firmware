@@ -1,11 +1,12 @@
 # debian-nofree-firmware
 Unofficial solution for debian nofree firmware
 ============================================================
-~~~ 
+
 1. First, go to download the linux kernel official mainline firmware package from this link :
 
+```
  https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/ 
-  
+```  
 
 2. Unzip the firmware package
 
