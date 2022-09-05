@@ -8,7 +8,7 @@ This is an unofficial solution for debian nofree firmware, suitable for newbies:
 
    ~~~ rb
   https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/
-   ~~~ 
+   ~~~ rb
 
 2. Unzip the firmware package
 
