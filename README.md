@@ -1,5 +1,4 @@
 # Unofficial solution for debian nofree firmware
-===========================================================
 
 1. First, go to download the linux kernel official mainline firmware package from this link :
 
