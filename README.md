@@ -98,7 +98,7 @@
   cp /home/yourname/firmware/regulatory/* /lib/firmware && \
   update-initramfs -u -k all
 ```
-13. Now is the time to start the service
+13. Now it's the time to start the service
 
 ```
   sudo systemctl enable --now firmware.service 
