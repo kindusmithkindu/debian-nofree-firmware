@@ -42,28 +42,24 @@ Unofficial solution for debian nofree firmware
 
 ```
   ath10k_pci 0000:07:00.0: firmware: failed to load ath10k/pre-cal-pci-0000:07:00.0.bin
-```
-
-```
   ath10k_pci 0000:07:00.0: firmware: failed to load ath10k/cal-pci-0000:07:00.0.bin
 ```
 8. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a “firmware.timer” based on this service
 
-```
 firmware.service:
 
+```
 [Unit]
 Description="Use firmware script to install the Linux firmware"
 
 [Service]
 WorkingDirectory=/home/yourname/firmware
 ExecStart=/bin/sh -c '/home/yourname/firmware/firmware'
-
 ```
 
-```
 firmware.timer:
 
+```
 [Unit]
 Description="Linux firmware install"
 
