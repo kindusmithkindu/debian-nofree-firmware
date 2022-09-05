@@ -45,7 +45,7 @@ Unofficial solution for debian nofree firmware
   ath10k_pci 0000:07:00.0: firmware: failed to load ath10k/pre-cal-pci-0000:07:00.0.bin
   ath10k_pci 0000:07:00.0: firmware: failed to load ath10k/cal-pci-0000:07:00.0.bin
 ```
-9. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a “firmware.timer” based on this service
+9. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a “firmware.timer” based on this service,Please replace yourname in the text with your personal user name
 
 ```
   firmware.service:
@@ -72,7 +72,7 @@ Unofficial solution for debian nofree firmware
   WantedBy=timers.target
 ```
 
-10. Please replace yourname in the text with your personal user name, and create a new firemware directory and firmware script, and grant executable permissions
+10. Create a new firemware directory and firmware script, and grant executable permissions
 
 ```
    sudo mkdir ~/firmware  
