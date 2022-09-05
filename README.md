@@ -39,13 +39,13 @@ Unofficial solution for debian nofree firmware
 ```
    sudo update-initramfs -d -k all && sudo update-initramfs -c -k all
 ```
-7. At this point, you have basically solved most of the firmware problems, but there are still two small datum test packages that cannot be installed. Of course, these are optional dependencies and you can completely ignore them. Use the command of “sudo dmesg|grep fail” , you should see two error messages, please ignore them:
+8. At this point, you have basically solved most of the firmware problems, but there are still two small datum test packages that cannot be installed. Of course, these are optional dependencies and you can completely ignore them. Use the command of “sudo dmesg|grep fail” , you should see two error messages, please ignore them:
 
 ```
   ath10k_pci 0000:07:00.0: firmware: failed to load ath10k/pre-cal-pci-0000:07:00.0.bin
   ath10k_pci 0000:07:00.0: firmware: failed to load ath10k/cal-pci-0000:07:00.0.bin
 ```
-8. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a “firmware.timer” based on this service
+9. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a “firmware.timer” based on this service
 
 ```
   firmware.service:
@@ -72,7 +72,7 @@ Unofficial solution for debian nofree firmware
   WantedBy=timers.target
 ```
 
-9. Please replace yourname in the text with your personal user name, and create a new firemware directory and firmware script, and grant executable permissions
+10. Please replace yourname in the text with your personal user name, and create a new firemware directory and firmware script, and grant executable permissions
 
 ```
    sudo mkdir ~/firmware  
@@ -85,12 +85,12 @@ Unofficial solution for debian nofree firmware
 ```
    sudo chmod +x firmware
 ```
-10. Use vim or nano to edit this firmware script
+11. Use vim or nano to edit this firmware script
 
 ```
    sudo vim ~/firmware
 ```
-11. Add the following code. Yourname in the text needs to be replaced with your personal username:
+12. Add the following code. Yourname in the text needs to be replaced with your personal username:
 
 ```
   #!/bin/bash
@@ -100,7 +100,7 @@ Unofficial solution for debian nofree firmware
   cp /home/yourname/firmware/regulatory/* /lib/firmware && \
   update-initramfs -u -k all
 ```
-12. Now is the time to start the service
+13. Now is the time to start the service
 
 ```
   sudo systemctl enable --now firmware.service 
@@ -109,4 +109,5 @@ Unofficial solution for debian nofree firmware
 ```
   sudo systemctl enable --now firmware.timer
 ```
-13. Done
+14. Done
+15. If you have any questions, please go to issue to discuss
