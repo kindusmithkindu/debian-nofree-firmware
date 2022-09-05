@@ -33,7 +33,7 @@ Unofficial solution for debian nofree firmware
 ```
    sudo update-initramfs -u -k all
 ```
-  or, a fresh install
+    or, a fresh install
 
 ```
    sudo update-initramfs -d -k all && sudo update-initramfs -c -k all
@@ -48,6 +48,7 @@ Unofficial solution for debian nofree firmware
 
 ```
   firmware.service:
+  
   [Unit]
   Description="Use firmware script to install the Linux firmware"
 
@@ -57,6 +58,7 @@ Unofficial solution for debian nofree firmware
 ```
 ```
   firmware.timer:
+  
   [Unit]
   Description="Linux firmware install"
 
