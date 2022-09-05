@@ -5,7 +5,7 @@ Unofficial solution for debian nofree firmware
 1. First, go to download the linux kernel official mainline firmware package from this link :
 
 ```
- https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/ 
+   https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/ 
 ```  
 
 2. Unzip the firmware package
@@ -46,7 +46,7 @@ Unofficial solution for debian nofree firmware
 ```
 8. But the firmware is updated from time to time, you can also set a “firmware update” service, move it to /etc/systemd/system, and set a “firmware.timer” based on this service
 
-firmware.service:
+  firmware.service:
 
 ```
 [Unit]
@@ -57,7 +57,7 @@ WorkingDirectory=/home/yourname/firmware
 ExecStart=/bin/sh -c '/home/yourname/firmware/firmware'
 ```
 
-firmware.timer:
+  firmware.timer:
 
 ```
 [Unit]
@@ -93,14 +93,12 @@ WantedBy=timers.target
 11. Add the following code. Yourname in the text needs to be replaced with your personal username:
 
 ```
-#!/bin/bash
-
-axel -n10 https://kernel.source.codeaurora.cn/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/linux-firmware-main.tar.gz
-&& \
-tar -zxvf /home/yourname/firmware/linux-firmware-main.tar.gz -C /lib && \
-rm -rf /lib/firmware.old && mv /lib/firmware /lib/firmware.old && mv /lib/linux-firmware-main /lib/firmware && \
-cp /home/yourname/firmware/regulatory/* /lib/firmware && \
-update-initramfs -u -k all
+  #!/bin/bash
+  axel -n10 https://kernel.source.codeaurora.cn/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/linux-firmware-main.tar.gz && \
+  tar -zxvf /home/yourname/firmware/linux-firmware-main.tar.gz -C /lib && \
+  rm -rf /lib/firmware.old && mv /lib/firmware /lib/firmware.old && mv /lib/linux-firmware-main /lib/firmware && \
+  cp /home/yourname/firmware/regulatory/* /lib/firmware && \
+  update-initramfs -u -k all
 ```
 12. Now is the time to start the service
 
