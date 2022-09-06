@@ -70,18 +70,17 @@
   WantedBy=timers.target
 ```
 
-10. Create a new firmware directory and firmware script, and grant executable permissions
-
+10. Create a new firmware directory and firmware script, and grant executable permissions, at the same time Create regulatory directory under the firmware directory and copy all of regulatory file in the repository to this regulatory directory
 ```
-   sudo mkdir ~/firmware  
-```
-
-```
-   sudo touch ~/firmware/firmware
+   mkdir ~/firmware  
 ```
 
 ```
-   sudo chmod +x ~/firmware/firmware
+   touch ~/firmware/firmware && mkdir ~/firmware/regulatory && cp regulatory* ~/firmware/regulatory
+```
+
+```
+   chmod +x ~/firmware/firmware
 ```
 11. Use vim or nano to edit this firmware script
 
