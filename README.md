@@ -21,7 +21,7 @@
 ```
    sudo mv ~/linux-firmware-main /lib/firmware
 ```
-5. Download all regulatory files in this repository and move them under /lib/firmware
+5. Download all regulatory files in this repository and copy them under /lib/firmware
 
 ```
    sudo cp ~/regulatory* /lib/firmware/
