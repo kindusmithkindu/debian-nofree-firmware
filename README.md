@@ -11,7 +11,7 @@
 ```
    tar -zxvf linux-firmware-main.tar.gz
 ```
-3. Move the old firmware package to the firmware.old directory
+3. Move the old firmware package under the /lib directory to the firmware.old directory
 
 ```
    sudo mv /lib/firmware /lib/firmware.old
