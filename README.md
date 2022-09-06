@@ -81,7 +81,7 @@
 ```
 
 ```
-   sudo chmod +x firmware
+   sudo chmod +x ~/firmware/firmware
 ```
 11. Use vim or nano to edit this firmware script
 
