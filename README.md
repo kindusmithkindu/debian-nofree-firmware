@@ -9,7 +9,7 @@
 2. Unzip the firmware package
 
 ```
-   sudo tar -zxvf linux-firmware-main.tar.gz
+   tar -zxvf linux-firmware-main.tar.gz
 ```
 3. Move the old firmware package to the firmware.old directory
 
@@ -82,7 +82,7 @@
 11. Use vim or nano to edit this firmware script
 
 ```
-   sudo vim ~/firmware/firmware
+   vim ~/firmware/firmware
 ```
 12. Add the following code. Yourname in the script needs to be replaced with your personal username:
 
