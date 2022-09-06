@@ -88,7 +88,7 @@
 ```
    sudo vim ~/firmware/firmware
 ```
-12. Add the following code. Yourname in the text needs to be replaced with your personal username:
+12. Add the following code. Yourname in the script needs to be replaced with your personal username:
 
 ```
   #!/bin/bash
