@@ -70,7 +70,7 @@
   WantedBy=timers.target
 ```
 
-10. Create a new firemware directory and firmware script, and grant executable permissions
+10. Create a new firmware directory and firmware script, and grant executable permissions
 
 ```
    sudo mkdir ~/firmware  
