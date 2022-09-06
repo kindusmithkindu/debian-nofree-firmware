@@ -72,7 +72,7 @@
 
 10. Create a new firmware directory and firmware script under your personal directory, and grant executable permissions, at the same time Create regulatory directory under the firmware directory and copy all of regulatory file in the repository to this regulatory directory
 ```
-   mkdir ~/firmware  && touch ~/firmware/firmware && chmod +x ~/firmware/firmware
+   mkdir ~/firmware && touch ~/firmware/firmware && chmod +x ~/firmware/firmware
 ```
 
 ```
