@@ -86,7 +86,7 @@
 11. Use vim or nano to edit this firmware script
 
 ```
-   sudo vim ~/firmware
+   sudo vim ~/firmware/firmware
 ```
 12. Add the following code. Yourname in the text needs to be replaced with your personal username:
 
