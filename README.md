@@ -92,7 +92,7 @@
   tar -zxvf /home/yourname/firmware/linux-firmware-main.tar.gz -C /lib && \
   rm -rf /lib/firmware.old && mv /lib/firmware /lib/firmware.old && mv /lib/linux-firmware-main /lib/firmware && \
   cp /home/yourname/firmware/regulatory/* /lib/firmware && \
-  update-initramfs -u -k all
+  update-initramfs -u -k all && rm -rf /home/yourname/firmware/linux*
 ```
 13. Now it's the time to start the service
 
